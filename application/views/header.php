@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php echo base_url('/asset/bootstrap/css/bootstrap.min.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('/asset/datatable/css/jquery.dataTables.min.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('/asset/datatable/css/responsive.bootstrap.css'); ?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <script src="<?php echo base_url('/asset/js/jquery.slim.min.js'); ?>" crossorigin="anonymous"></script>
     <script src="<?php echo base_url('/asset/js/jquery-3.7.0.js'); ?>" crossorigin="anonymous"></script>
     <script src="<?php echo base_url('/asset/js/jquery.validate.min.js'); ?>" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -17,6 +17,19 @@
     <script src="<?php echo base_url('/asset/dropzone/js/dropzone.min.js'); ?>"></script>
     <script src="<?php echo base_url('/asset/select2/js/select2.min.js'); ?>"></script>
     <link href="<?php echo base_url('/asset/select2/css/select2.min.css'); ?>" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo base_url('asset/theme/fonts/boxicons.css'); ?>" />
+    <link rel="stylesheet" href="<?php echo base_url('asset/theme/css/core.css'); ?>" />
+    <link rel="stylesheet" href="<?php echo base_url('asset/theme/css/theme-default.css') ?>" />
+    <link rel="stylesheet" href="<?php echo base_url('asset/theme/css/demo.css'); ?>" />
+    <link rel="stylesheet" href="<?php echo base_url('asset/theme/css/perfect-scrollbar.css'); ?>" />
+    <link rel="stylesheet" href="<?php echo base_url('asset/theme/css/apex-charts.css'); ?>" />
+    <script src="<?php echo base_url('asset/theme/js/helpers.js'); ?>"></script>
+    <script src="<?php echo base_url('asset/theme/js/config.js'); ?>"></script>
 
     <title><?php echo $title ?? '' ?></title>
 
@@ -37,7 +50,7 @@
         }
 
         body {
-            font-family: "Graphik";
+            font-family: " Graphik";
             font-weight: 500;
             margin: 0;
             padding: 0;
@@ -190,3 +203,5 @@
     <div id="loader-container">
         <div class="loader"></div>
     </div>
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">

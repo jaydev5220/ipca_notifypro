@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /NotifyPro/
+    RewriteBase /ipca_notifypro/
 
     # Allow any files or directories that exist to be displayed directly
     RewriteCond %{REQUEST_FILENAME} !-f
@@ -12,5 +12,5 @@
 
 <IfModule !mod_rewrite.c>
     # If mod_rewrite is not available, show an error message
-    ErrorDocument 404 /NotifyPro/index.php
+    ErrorDocument 404 /ipca_notifypro/index.php
 </IfModule>

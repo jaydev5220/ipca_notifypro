@@ -23,6 +23,7 @@ class Admin extends CI_Controller
         $data['title'] = 'Admin';
         $data['permission'] = $this->admin_model->get_user_role_permission($this->session->userdata('role'));
         $this->load->view('header', $data);
+        $this->load->view('sidebar');
         $this->load->view('admin/index');
         $this->load->view('footer');
     }
@@ -334,7 +335,7 @@ class Admin extends CI_Controller
             foreach ($list_table as $key => $value) {
 
                 $user = $value->first_name . ' ' . $value->last_name;
-                
+
                 $status = '';
                 if ($value->status_1 == 'accept') {
                     $status = '<span class="text text-success">' . $value->status_1 . '</span>';
@@ -344,10 +345,10 @@ class Admin extends CI_Controller
                     $status = '<span class="text text-warning">' . $value->status_1 . '</span>';
                 }
 
-                if($value->document_count == 0){
+                if ($value->document_count == 0) {
                     $document_link = $value->document_count;
-                }else{
-                   $document_link = '<a href="' . base_url() . 'admin/document_list/' . base64_encode($value->id) . '">' . $value->document_count . '</a>';
+                } else {
+                    $document_link = '<a href="' . base_url() . 'admin/document_list/' . base64_encode($value->id) . '">' . $value->document_count . '</a>';
                 }
 
                 $status_2 = '';
