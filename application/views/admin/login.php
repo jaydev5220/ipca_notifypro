@@ -1,28 +1,38 @@
-<div class="container py-5">
-    <div style="display: flex;justify-content: center;align-items: center;">
-        <h2 class="header_title">Login Page</h2>
-    </div>
-    <div class="mt-5 d-grid" style="padding-top: 45px;">
-        <form method="POST" id="login_form" class="mt-2" onsubmit="return false">
-            <div class="mb-3">
-                <label for="username" class="form-label" style="font-size: 20px;">Username</label>
-                <input type="text" class="form-control custom-input rounded-0" id="username" style="width: 50%;" name="username">
+<div class="container">
+    <div class="authentication-wrapper authentication-basic container-p-y">
+        <div class="authentication-inner">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                        <a href="javascript:void(0)" class="gap-2" style="text-decoration: none !important;">
+                            <span class="app-brand-text demo text-body fw-bolder">Login</span>
+                        </a>
+                    </div>
+
+                    <form method="POST" id="login_form" class="mt-2" onsubmit="return false">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Enter your email" autofocus />
+                        </div>
+                        <div class="mb-3 form-password-toggle">
+                            <div class="d-flex justify-content-between">
+                                <label class="form-label" for="password">Password</label>
+                                <a href="<?php echo base_url('admin/admin_reset_password') ?>">
+                                    <small>Reset Password?</small>
+                                </a>
+                            </div>
+                            <input type="password" id="password" class="form-control" name="password" placeholder="Enter your password" />
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label" style="font-size: 20px;">Password</label>
-                <input type="password" class="form-control custom-input rounded-0" id="password" style="width: 50%;" name="password">
-            </div>
-            <div class="mt-4">
-                <button type="submit" id="submit" name="submit" style="border: 1px solid #000; padding: 7px;color:#000;font-size: 20px;">SUBMIT</button>
-            </div>
-            <div class="mt-4">
-                <a href="<?php echo base_url('admin/admin_reset_password') ?>" style="border: 1px solid #000; padding: 7px;color:#000;font-size: 20px;">
-                    Reset password
-                </a>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
+
 <script>
     $(document).ready(function() {
 
@@ -38,8 +48,8 @@
                 }
             },
             messages: {
-                tenant_email: "Please enter a valid username",
-                tenant_password: "Please enter your password"
+                username: "Please enter a valid username",
+                password: "Please enter your password"
             },
             submitHandler: function(form) {
                 showLoader();

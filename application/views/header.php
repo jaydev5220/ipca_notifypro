@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="<?php echo base_url('asset/theme/css/demo.css'); ?>" />
     <link rel="stylesheet" href="<?php echo base_url('asset/theme/css/perfect-scrollbar.css'); ?>" />
     <link rel="stylesheet" href="<?php echo base_url('asset/theme/css/apex-charts.css'); ?>" />
+    <link rel="stylesheet" href="<?php echo base_url('asset/theme/css/page-auth.css'); ?>" />
     <script src="<?php echo base_url('asset/theme/js/helpers.js'); ?>"></script>
     <script src="<?php echo base_url('asset/theme/js/config.js'); ?>"></script>
 
